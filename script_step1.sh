@@ -47,22 +47,22 @@ accelerate launch run_distillation.py \
   --save_steps 1000 \
   --warmup_steps 500 \
   --learning_rate 0.0001 \
-  --lr_scheduler_type "constant_with_warmup" \
-  --timestamp_probability 0.2 \
+  --lr_scheduler_type "linear" \
+  --timestamp_probability 0.5 \
   --condition_on_prev_probability 0.2 \
   --task "transcribe" \
-  --logging_steps 25 \
+  --logging_steps 100 \
   --save_total_limit 1 \
-  --max_steps 80000 \
+  --max_steps 40000 \
   --wer_threshold 20 \
-  --per_device_train_batch_size 8 \
-  --gradient_accumulation_steps 16 \
+  --per_device_train_batch_size 32 \
+  --gradient_accumulation_steps 4 \
   --per_device_eval_batch_size 8 \
   --dataloader_num_workers 1 \
   --preprocessing_num_workers 8 \
   --ddp_timeout 7200 \
   --dtype "bfloat16" \
-  --attn_implementation "flash_attention_2" \
+  --attn_implementation "flash_attention_2" \ #sdpa
   --output_dir "../results" \
   --do_train \
   --do_eval \
@@ -75,4 +75,4 @@ accelerate launch run_distillation.py \
   --use_pseudo_labels False
   # --push_to_hub
 
-# thêm kl divergence tăng wer do kiến thức distill được áp dụng cho cả word-level lẫn sequence-lvel
+# thêm kl divergence tăng wer do kiến thức distill được áp dụng cho cả word-level lẫn sequence-level
