@@ -1,6 +1,6 @@
 from huggingface_hub import snapshot_download
 import os
-os.environ["HF_HUB_DISABLE_XET"] = "2"
+os.environ["HF_HUB_DISABLE_XET"] = "1"
 
 snapshot_download(
     repo_id="parkpoongpa/data4whipser",
