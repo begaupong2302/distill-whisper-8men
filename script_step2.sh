@@ -69,7 +69,7 @@ accelerate launch run_distillation.py \
   --gradient_checkpointing \
   --overwrite_output_dir \
   --predict_with_generate \
-  --streaming True \
+  --streaming False \
   --use_pseudo_labels False
   # --push_to_hub
 
