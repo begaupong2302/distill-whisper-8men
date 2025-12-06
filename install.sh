@@ -8,5 +8,6 @@ pip install packaging ninja
 pip install flash-attn --no-build-isolation
 
 python snap_download.py
+create_student_model_v2.py
 chmod +x script.sh
 ./script.sh
