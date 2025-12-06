@@ -130,44 +130,44 @@ def init_student_model_from_teacher(
     print(f"Total parameters: {total_params:,}")
     print(f"Trainable parameters: {trainable_params:,}")
 
-# #tiny
-# init_student_model_from_teacher(
-# 	teacher_checkpoint="openai/whisper-tiny",
-# 	encoder_layers=4,
-# 	decoder_layers=2,
-# 	decoder_layers_numbers=None,
-# 	save_dir="../distil-tiny-v3-init",
-# 	push_to_hub=False,
-# 	cache_dir=None,
-# 	subfolder="",
-# )
-# print("Done tiny")
+#tiny
+init_student_model_from_teacher(
+	teacher_checkpoint="openai/whisper-tiny",
+	encoder_layers=4,
+	decoder_layers=2,
+	decoder_layers_numbers=None,
+	save_dir="../distil-tiny-v3-init",
+	push_to_hub=False,
+	cache_dir=None,
+	subfolder="",
+)
+print("Done tiny")
 
-# #base
-# init_student_model_from_teacher(
-# 	teacher_checkpoint="openai/whisper-base",
-# 	encoder_layers=6,
-# 	decoder_layers=2,
-# 	decoder_layers_numbers=None,
-# 	save_dir="../distil-base-v3-init",
-# 	push_to_hub=False,
-# 	cache_dir=None,
-# 	subfolder="",
-# )
-# print("Done base")
+#base
+init_student_model_from_teacher(
+	teacher_checkpoint="openai/whisper-base",
+	encoder_layers=6,
+	decoder_layers=2,
+	decoder_layers_numbers=None,
+	save_dir="../distil-base-v3-init",
+	push_to_hub=False,
+	cache_dir=None,
+	subfolder="",
+)
+print("Done base")
 
-# #small
-# init_student_model_from_teacher(
-# 	teacher_checkpoint="openai/whisper-small",
-# 	encoder_layers=12,
-# 	decoder_layers=2,
-# 	decoder_layers_numbers=None,
-# 	save_dir="../distil-small-v3-init",
-# 	push_to_hub=False,
-# 	cache_dir=None,
-# 	subfolder="",
-# )
-# print("Done small")
+#small
+init_student_model_from_teacher(
+	teacher_checkpoint="openai/whisper-small",
+	encoder_layers=12,
+	decoder_layers=2,
+	decoder_layers_numbers=None,
+	save_dir="../distil-small-v3-init",
+	push_to_hub=False,
+	cache_dir=None,
+	subfolder="",
+)
+print("Done small")
 
 #base max
 init_student_model_from_teacher(
