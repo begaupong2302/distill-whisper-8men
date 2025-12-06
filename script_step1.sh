@@ -71,7 +71,7 @@ accelerate launch run_distillation.py \
   --predict_with_generate \
   --freeze_encoder \
   --freeze_embed_positions \
-  --streaming True \
+  --streaming False \
   --use_pseudo_labels False
   # --push_to_hub
 
